@@ -32,7 +32,7 @@ ansible all -m user -a "name=ansible-new" --become
 
 lists all users in the machine. Check if ansible-new is present in the managed nodes / localhost
 ```
-ansible node1 -a "cat /etc/passwd"
+ansible node2 -a "cat /etc/passwd"
 ```
 
 List all directories in /home. Ensure that directory 'ansible-new' is present in /home. 
