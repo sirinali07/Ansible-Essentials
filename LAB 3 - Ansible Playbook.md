@@ -14,9 +14,9 @@ Add the given content, by pressing "INSERT"
   hosts: all
   become: yes
   tasks:
-    - name: Task1 will install httpd using apt
+    - name: Task1 will install apache2 using apt
       apt:
-        name: httpd
+        name: apache2
         #local cache of the package information available from the repositories configured on the system
         update_cache: yes
         state: latest
@@ -30,9 +30,9 @@ Add the given content, by pressing "INSERT"
         owner: apache
         group: apache
         mode:  0644
-    - name: Task4 will start the httpd
+    - name: Task4 will start the apache2
       service:
-        name: httpd
+        name: apache2
         state: started
 ```
 **save the file using** `ESCAPE + :wq!`
@@ -43,7 +43,7 @@ to installation, it will go ahead and update if it is not of the latest availabl
 
 Now lets create an index.html file to be used as the landing page for the web server.
 In task2 of the above playbook, this 'index.html' will be copied to the document root of the 
-httpd server.
+apache2 server.
 ```
 vi index.html
 ```
@@ -58,7 +58,7 @@ Add the given content, by pressing "INSERT"
 ```
 **save the file using** `ESCAPE + :wq!`
 
-Now run the playbook so that it installs httpd to all the hosts and index.html is copied from 
+Now run the playbook so that it installs apache2 to all the hosts and index.html is copied from 
 the ansible-control
 ```
 ansible-playbook install-apache-pb.yml
