@@ -14,8 +14,8 @@ Add the given content, by pressing "INSERT"
   hosts: all
   become: yes
   tasks:
-    - name: Task1 will install httpd using yum
-      yum:
+    - name: Task1 will install httpd using apt
+      apt:
         name: httpd
         #local cache of the package information available from the repositories configured on the system
         update_cache: yes
