@@ -2,7 +2,7 @@
 -----------------------------------------------------------------------------------
 ### Task 1: Creating a playbook and adding content to a file
 ```
-cd /home/sirin_a/ansible-labs
+cd /home/ec2-user/ansible-labs
 ```
 ```
 vi putfile.yml
