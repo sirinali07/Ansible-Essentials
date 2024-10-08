@@ -80,7 +80,7 @@ cp install-apache-pb.yml uninstall-apache-pb.yml
 ```
 vi uninstall-apache-pb.yml
 ```
-Retain only first task. Replace 'state: latest' with 'state: absent'
+Retain only first task. Replace `state: latest` with `state: absent`
 
 Check if the playbook is ok
 ```
