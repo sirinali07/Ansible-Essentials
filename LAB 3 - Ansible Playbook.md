@@ -22,7 +22,7 @@ Add the given content, by pressing "INSERT"
         state: latest
     - name: Task2 will upload custom index.html into all hosts
       copy:
-        src: /home/ec2-user/ansible-labs/index.html
+        src: /home/sirin_a/ansible-labs/index.html
         dest: /var/www/html
     - name: Task3 will setup attributes for file
       file:
